@@ -1,14 +1,31 @@
 var countdownNumberEl = document.getElementById('countdown-number');
 var timerPlayPauseImgSrc = document.querySelector("#countdown-start a img");
-var countdown = 60;
 var intervalOFExecution;
 var timerState = false;
+const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+// a and b are javascript Date objects
+function dateDiffInDays(a, b) {
+    // Discard the time and time-zone information.
+    const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+    const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+    return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
+difference = dateDiffInDays(new Date("2021-04-30"), new Date());
+console.log(difference);
+document.getElementById("daycount").textContent = difference;
+
+var initTimeValue = 70 + Math.round(parseInt(difference) / 2 - 0.1) * 10;
+var countdown = initTimeValue;
+countdownNumberEl.textContent = countdown;
 var timerStart = function() {
     if (timerState) {
-        timerClear();
+        timerStop();
         return;
     }
-
+    var countdown = initTimeValue;
     timerState = true;
     timerPlayPauseImgSrc.src = "asset/images/pause-circle.svg"
     countdown = countdown - 1;
@@ -16,33 +33,22 @@ var timerStart = function() {
     intervalOFExecution = setInterval(function() {
         countdown = countdown - 1;
         if (countdown < 0) {
-            countdown = 60;
-            timerClear();
+            timerStop();
+            return;
         }
         countdownNumberEl.textContent = countdown;
     }, 1000);
 }
 
-var timerClear = function() {
+var timerStop = function() {
     timerState = false;
     timerPlayPauseImgSrc.src = "asset/images/play-circle.svg"
     clearInterval(intervalOFExecution);
 }
 
 
-var timerClear60 = function() {
-    countdown = 60;
+var timerClear = function() {
+    countdown = initTimeValue;
     countdownNumberEl.textContent = countdown;
-    timerClear();
+    timerStop();
 }
-
-function parseDate(str) {
-    var mdy = str.split('/');
-    return new Date(mdy[2], mdy[0] - 1, mdy[1]);
-}
-
-function datediff(first, second) {
-    return Math.round((second - first) / (1000 * 60 * 60 * 24));
-}
-
-alert(datediff(parseDate(first.value), parseDate(second.value)));
