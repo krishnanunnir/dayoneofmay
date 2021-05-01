@@ -11,7 +11,7 @@ body {
     width: 40%;
     padding: 2%;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-    margin-top: 13em;
+    margin-top: 5em;
     background-color: white;
     display: flex;
 }
@@ -77,6 +77,34 @@ body {
     text-align: left;
 }
 
-#basedonnav {
-    text-align: right;
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#contentintro {
+    position: relative;
+    margin: auto;
+    color: white;
+    width: 40%;
+    padding: 2%;
+    margin-top: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+    #countdown {
+        width: 86%;
+        padding: 4%;
+    }
+    #navigation {
+        width: 90%;
+    }
+    #contentintro {
+        width: 90%;
+    }
+    #basedonnav {
+        font-size: 0.9em;
+    }
 }
