@@ -2,6 +2,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #7272e3;
+    margin: 0;
 }
 
 #countdown {
@@ -11,7 +12,7 @@ body {
     width: 40%;
     padding: 2%;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-    margin-top: 5em;
+    margin-top: 1em;
     background-color: white;
     display: flex;
 }
@@ -88,9 +89,10 @@ a {
     color: white;
     width: 40%;
     padding: 2%;
-    margin-top: 3em;
+    margin-top: 2em;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
