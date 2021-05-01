@@ -20,8 +20,7 @@ body {
     flex-shrink: 0;
     color: black;
     display: inline-block;
-    line-height: 40px;
-    font-size: 2em;
+    font-size: 4em;
 }
 
 #countdown-start {
@@ -33,10 +32,18 @@ body {
     margin: auto;
 }
 
+#countdown-start img {
+    padding: 0.2em;
+}
+
+#countdown-reset img {
+    padding: 0.2em;
+}
+
 #countdown-text {
     flex-grow: 1;
     text-align: right;
-    font-size: 1.2em;
+    font-size: 2em;
     margin: auto;
 }
 
