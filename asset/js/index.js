@@ -11,6 +11,7 @@ var timerStart = function() {
 
     timerState = true;
     timerPlayPauseImgSrc.src = "asset/images/pause-circle.svg"
+    countdown = countdown - 1;
     countdownNumberEl.textContent = countdown;
     intervalOFExecution = setInterval(function() {
         countdown = countdown - 1;
@@ -34,3 +35,14 @@ var timerClear60 = function() {
     countdownNumberEl.textContent = countdown;
     timerClear();
 }
+
+function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+}
+
+function datediff(first, second) {
+    return Math.round((second - first) / (1000 * 60 * 60 * 24));
+}
+
+alert(datediff(parseDate(first.value), parseDate(second.value)));
