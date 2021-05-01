@@ -1,0 +1,50 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #7272e3;
+}
+
+#countdown {
+    position: relative;
+    margin: auto;
+    border-radius: 1em;
+    width: 40%;
+    padding: 2em;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 15em;
+    background-color: white;
+    display: flex;
+}
+
+#countdown-number {
+    flex-shrink: 0;
+    color: black;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 2em;
+}
+
+#countdown-start {
+    padding: 1%;
+    margin: auto;
+}
+
+#countdown-reset {
+    margin: auto;
+}
+
+#countdown-text {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}
