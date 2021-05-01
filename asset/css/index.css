@@ -9,9 +9,9 @@ body {
     margin: auto;
     border-radius: 1em;
     width: 40%;
-    padding: 2em;
+    padding: 2%;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-    margin-top: 15em;
+    margin-top: 13em;
     background-color: white;
     display: flex;
 }
@@ -54,4 +54,29 @@ body {
     to {
         stroke-dashoffset: 113px;
     }
+}
+
+#navigation {
+    position: relative;
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: white;
+    display: flex;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.elem-navigation {
+    text-align: right;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#aboutnav {
+    text-align: left;
+}
+
+#basedonnav {
+    text-align: right;
 }

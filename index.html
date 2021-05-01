@@ -3,12 +3,22 @@
 
 <head>
     <link rel="stylesheet" href="asset/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <title></title>
 </head>
 
 <body>
-    <div id="countdown" class="flex-container">
+    <div id="navigation">
+        <div class="elem-navigation" id="aboutnav">
+            About
+        </div>
+        <div class="elem-navigation" id="basedonnav">
+            View on Github
+        </div>
+    </div>
+    <div id="countdown">
         <div id="countdown-number"></div>
         <div id="countdown-start">
             <a href="#" onclick="timerStart()"><img src="asset/images/play-circle.svg"></a>
