@@ -119,3 +119,7 @@ a {
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+
+li a {
+    text-decoration: underline;
+}
