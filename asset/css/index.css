@@ -94,6 +94,35 @@ a {
     font-size: 1.2em;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+li a {
+    text-decoration: underline;
+}
+
+#aboutintro a {
+    text-decoration: none;
+}
+
+#aboutintro {
+    position: relative;
+    margin: auto;
+    color: white;
+    width: 60%;
+    padding: 2%;
+    margin-top: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
 @media only screen and (max-width: 600px) {
     #countdown {
         width: 86%;
@@ -108,18 +137,12 @@ a {
     #basedonnav {
         font-size: 0.9em;
     }
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-li a {
-    text-decoration: underline;
+    #aboutintro {
+        width: 90%;
+    }
+    .footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
 }
