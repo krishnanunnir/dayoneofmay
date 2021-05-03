@@ -1,6 +1,7 @@
 var countdownNumberEl = document.getElementById('countdown-number');
 var timerPlayPauseImgSrc = document.querySelector("#countdown-start a img");
 var intervalOFExecution;
+var audio = document.getElementById("player");
 var timerState = false;
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
@@ -27,6 +28,7 @@ var timerStart = function() {
     }
     var countdown = initTimeValue;
     timerState = true;
+    audio.play();
     timerPlayPauseImgSrc.src = "asset/images/pause-circle.svg"
     countdown = countdown - 1;
     countdownNumberEl.textContent = countdown;
@@ -41,6 +43,7 @@ var timerStart = function() {
 }
 
 var timerStop = function() {
+    audio.pause();
     timerState = false;
     timerPlayPauseImgSrc.src = "asset/images/play-circle.svg"
     clearInterval(intervalOFExecution);
