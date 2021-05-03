@@ -15,7 +15,6 @@ function dateDiffInDays(a, b) {
 }
 
 difference = dateDiffInDays(new Date("2021-04-30"), new Date());
-console.log(difference);
 document.getElementById("daycount").textContent = difference;
 
 var initTimeValue = 70 + Math.round(parseInt(difference) / 2 - 0.1) * 10;
