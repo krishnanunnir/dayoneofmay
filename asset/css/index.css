@@ -79,8 +79,9 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
+    line-height: 16px;
 }
 
 #contentintro {
